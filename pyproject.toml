@@ -1,0 +1,23 @@
+[project]
+name = "pass"
+version = "0.1.0"
+description = "A CLI self-regulating tool. Run this when feeling overwhelmed."
+authors = [
+    { name = "Yining Huang", email = "victoria.huang777@gmail.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "black"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+pass = "cli:main"
