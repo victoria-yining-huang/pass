@@ -10,5 +10,5 @@ No unpredictable AI responses from the internet, or unsolicited advice from huma
 Brief description of what your project does.
 
 ## Installation
-source env/bin/activate
+source venv/bin/activate
 pip install -e .
