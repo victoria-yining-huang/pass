@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pass.egg-info/PKG-INFO
+pass.egg-info/SOURCES.txt
+pass.egg-info/dependency_links.txt
+pass.egg-info/entry_points.txt
+pass.egg-info/requires.txt
+pass.egg-info/top_level.txt
+processor/process_things.py
