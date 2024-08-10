@@ -1,6 +1,6 @@
 import argparse
 from typing import Sequence
-from processor.process_things import process_preoccupation
+from app.processor.process_things import process_preoccupation, process_all_purpose
 
 def str_to_bool(input: str) -> bool:
     """Convert a string to a boolean value."""
@@ -46,10 +46,15 @@ def main(argv: Sequence[str] | None = None) -> None:
     )
 
     args = parser.parse_args()
-    print('works')
+    if args.preoccupation:
+        process_preoccupation(args.preoccupation)
+    elif args.nothing_specific:
+        process_all_purpose()
     if not args.preoccupation and not args.nothing_specific:
         while args.add_more_preoccupations:
-            args.preoccupations = input(
+            # I want to show an output everytime the user shares a thought. It builds trust
+            args.preoccupation = input(
                 "What's on your mind? I will process it for you. "
             )
+            process_preoccupation(args.preoccupation)
             args.add_more_preoccupations = str_to_bool(input("Anything else? You can tell me. (y/n)"))

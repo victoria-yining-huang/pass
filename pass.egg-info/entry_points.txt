@@ -1,2 +1,2 @@
 [console_scripts]
-pass = cli:main
+pass = app.cli:main
